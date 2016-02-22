@@ -14,6 +14,7 @@ use Payum\Bundle\PayumBundle\DependencyInjection\Factory\Gateway\OmnipayOffsiteG
 use Payum\Bundle\PayumBundle\DependencyInjection\Factory\Gateway\OmnipayDirectGatewayFactory;
 use Payum\Bundle\PayumBundle\DependencyInjection\Factory\Gateway\PaypalExpressCheckoutNvpGatewayFactory;
 use Payum\Bundle\PayumBundle\DependencyInjection\Factory\Gateway\PaypalProCheckoutNvpGatewayFactory;
+use Payum\Bundle\PayumBundle\DependencyInjection\Factory\Gateway\PaypalRestGatewayFactory;
 use Payum\Bundle\PayumBundle\DependencyInjection\Factory\Gateway\PayexGatewayFactory;
 use Payum\Bundle\PayumBundle\DependencyInjection\Factory\Gateway\AuthorizeNetAimGatewayFactory;
 use Payum\Bundle\PayumBundle\DependencyInjection\Factory\Gateway\StripeCheckoutGatewayFactory;
@@ -38,6 +39,7 @@ class PayumBundle extends Bundle
 
         $extension->addGatewayFactory(new PaypalExpressCheckoutNvpGatewayFactory);
         $extension->addGatewayFactory(new PaypalProCheckoutNvpGatewayFactory);
+        $extension->addGatewayFactory(new PaypalRestGatewayFactory);
         $extension->addGatewayFactory(new Be2BillDirectGatewayFactory);
         $extension->addGatewayFactory(new Be2BillOffsiteGatewayFactory);
         $extension->addGatewayFactory(new AuthorizeNetAimGatewayFactory);
